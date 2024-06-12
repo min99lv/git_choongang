@@ -16,7 +16,7 @@ public class OraSelect01 {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 //								 하나의 입력 코드 -> 가독성이 좋음  다른방법 : String format
-		String sql = "Select dname, loc From Dept Where deptno =" + deptno;
+		String sql = "Select dname, loc From Dept Where deptno =" + deptno; //유니크 , 유일성
 		Connection conn = null; // DB
 		Statement stmt = null; 	// Sql
 		ResultSet rs = null; // select시 결과 값 저장 --> Select를 했을경우 반드시 ResultSet사용

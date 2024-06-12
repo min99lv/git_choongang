@@ -1,4 +1,4 @@
-package ch15_ex01;
+package ch15_ex02;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,29 +6,22 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class OraDelete {
+public class MyDelete {
 
 	public static void main(String[] args) throws SQLException {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("삭제할 부서를 입력하세요?");
-		String deptno = sc.nextLine();
-//		객체 초기화
+		System.out.println("mySql 삭제할 부서를 입력하세요?");
+		String dno = sc.nextLine();
 		Connection conn = null;
 		Statement stmt = null;
-//		변수 선언
-		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-		String sql = "DELETE DEPT WHERE DEPTNO =" + deptno;
-//		hw02
-//		삭제할 부서를 입력 코드를 이용하여 삭제
+		String driver = "com.mysql.cj.jdbc.Driver";
+		String url = "jdbc:mysql://127.0.0.1:3306/scottdb";
+		String sql = "DELETE from DIVISION WHERE DNO =" + dno;
 		try {
-//			드라이버 메모리에 올리기
+
 			Class.forName(driver);
-//			드라이버 연결
-			conn = DriverManager.getConnection(url, "scott", "tiger");
-//			sql문 실행
+			conn = DriverManager.getConnection(url, "root", "mysql84");
 			stmt = conn.createStatement();
-//			sql문 반환
 			int result = stmt.executeUpdate(sql);
 			if (result > 0)
 				System.out.println("삭제성공");
@@ -42,11 +35,12 @@ public class OraDelete {
 			if (stmt != null)
 				conn.close();
 		}
-//		스캐너 종료
-		sc.close();
+	
 	}
+
 }
 
-//삭제할 부서를 입력하세요 ?
-//53
-//삭제 성공 ^^
+//
+//MySql 삭제할 부서를 입력하세요 ?
+//51
+//MySql 삭제 성공  ^ ^

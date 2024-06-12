@@ -41,9 +41,9 @@ public class OraSelect02 {
 //			7902	FORD	ANALYST				7566	81/12/03	3000				20
 //			7934	MILLER		CLERK			7782	82/01/23	1300				10
 			if (rs.next()) {
-				do {
-					int empno = rs.getInt(1); // 숫자 = getInt //7369
-					String ename = rs.getString(2); //SMITH
+				do { // 일반적으로 do while문으로 진행 
+					int empno= rs.getInt(1); // 숫자 = getInt //7369
+					String ename 	= rs.getString(2); //SMITH
 					String job = rs.getString(3); //CLERK
 					int sal = rs.getInt("sal"); //800
 					Date date = rs.getDate("hiredate"); //80/12/17

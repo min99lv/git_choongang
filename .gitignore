@@ -6,3 +6,5 @@
 .idea/
 *.iml
 out/
+ojdbc6.jar
+mysql-connector-j-8.0.33.jar

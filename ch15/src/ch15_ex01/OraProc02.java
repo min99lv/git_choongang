@@ -25,9 +25,9 @@ public class OraProc02 {
 			cs = conn.prepareCall(sql);
 //			값을 입력함
 			cs.setInt(1, empno);
-//			파라메타 결과값을 받아옴
+//			파라메타 값을 가져와서 저장함
 			cs.registerOutParameter(2, java.sql.Types.VARCHAR);
-			cs.registerOutParameter(3, java.sql.Types.VARCHAR);
+			cs.registerOutParameter(3, java.sql.Types.INTEGER);
 			cs.executeQuery();
 			String ename = cs.getString(2);
 			int sal = cs.getInt(3);

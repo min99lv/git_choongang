@@ -1,10 +1,21 @@
 package ch01;
 
-public class Hello {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Hello, java world");
-	}
-
-}
+	class Super { 
+	    int index = 5; 
+	    public void printVal() {
+	        System.out.println("Super");
+	    } 
+	} 
+	class Sub extends Super {   
+	    int index = 2;   
+	    public void printVal() {   
+	        System.out.println("Sub"); 
+	    } 
+	} 
+	public class Hello {   
+	    public static void main(String[ ] args) {   
+	        Super sup = new Sub();   
+	        System.out.print(sup.index + " ");   
+	        sup.printVal(); 
+	    } 
+	  }

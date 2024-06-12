@@ -25,9 +25,9 @@ public class OraInsert {
 //		ex -->INSERT INTO DEPT  VALUES(50,'영업1팀','이대')
 //																sql은 대소문자 구분 X
 		String sql = String.format("Insert Into dept Values(%s, '%s', '%s')", deptno, dname, loc);
-		System.out.println("sql -> " + sql);
+		System.out.println("sql -> " + sql); // 오류 잡는 코드
 		Connection conn = null;
-		Statement stmt = null;
+		Statement stmt = null;	// 명령문을 만든다
 
 		try {
 			Class.forName(driver);

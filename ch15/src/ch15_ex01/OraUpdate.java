@@ -21,7 +21,8 @@ public class OraUpdate {
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 //		String sql = " UPDATE DEPT SET DNAME = '" + dname + "', LOC = '" + loc + "' WHERE DEPTNO = " + deptno;
 		String sql = String.format("UPDATE dept SET dname = '%s', loc = '%s' WHERE deptno = %s", dname, loc, deptno); 
-		
+//		 String sql = String.format ("Update Dept set dname ='%s',"+  "loc='%s' where deptno=%s",dname,loc,deptno);
+		System.out.println("sql->"+sql);
 		Connection conn = DriverManager.getConnection(url, "scott", "tiger");
 		Statement stmt = conn.createStatement();
 

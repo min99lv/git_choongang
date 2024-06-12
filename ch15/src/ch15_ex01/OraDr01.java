@@ -7,7 +7,7 @@ public class OraDr01 {
 
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver"; // 약속 , 예약어
-//								예약어 + @ip주소
+//								예약어 + @ip주소		개발 DB :개발포트번호:서비스아이디
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		System.out.println("start1"); // 오류 시점 찾기
 		try {
