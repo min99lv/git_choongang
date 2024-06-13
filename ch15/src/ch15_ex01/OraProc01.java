@@ -14,11 +14,11 @@ public class OraProc01 {
 		System.out.println("입력할 Oracle 근무지 ?"); String loc = sc.nextLine();
 
 		Connection conn = null;
- //		Procedure 호출 = callableStatement 객체 사용
+ //		Procedure 호출 = callableStatement 객체 사용 -> prepareStatement의 하위객체
 		CallableStatement cs = null;
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-//		Procefure Call 할때의 Format
+//		Procedure Call 할때의 Format
 		String sql = "{call dept_Insert(?,?,?)}";
 		
 		try {

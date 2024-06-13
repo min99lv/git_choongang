@@ -24,7 +24,7 @@ public class MySelect02 {
 		ResultSet rs = null; // 결과
 
 		System.out.println("MYSQL 교수명단");
-		System.out.println("교수번호\t이름\t직위\t\t급여\t학과코드");
+		System.out.println("교수번호\t이름\t직위\t급여\t학과코드");
 		System.out.println("=================================================");
 
 		try {
@@ -40,7 +40,7 @@ public class MySelect02 {
 					int sal = rs.getInt("sal"); // 800
 					int deptno = rs.getInt(8); // 숫자 = getInt //7369
 //					if (position.length() > 7) // 칸 맞추는 용 로직
-						System.out.printf("%d\t%s\t%s\t\t%d\t%d\n", profno, name, position, sal, deptno);
+						System.out.printf("%d\t%s\t%s\t%d\t%d\n", profno, name, position, sal, deptno);
 //					else
 //						System.out.printf("%d\t%s\t%s\t\t%d\t%TF\n", profno, name, position, sal, deptno);}
 				}while (rs.next()); // 멀티 로우 실행 , 로우 단위로 실행

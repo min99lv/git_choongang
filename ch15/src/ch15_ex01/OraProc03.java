@@ -27,7 +27,7 @@ public class OraProc03 {
 			cs.setString(2, empno); // 변경 사번
 			cs.registerOutParameter(1, java.sql.Types.DOUBLE); // 변경 급여
 			cs.executeQuery();
-			Double sal = cs.getDouble(1);
+			Double sal = cs.getDouble(1); // double로 선언했기때문에 double로 받아야한다.
 
 			if (sal > 0) {
 				System.out.println("oracle callablestatement 수정 성공");

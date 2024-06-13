@@ -39,9 +39,9 @@ public class MyPrepare {
 
 			int result = pstmt.executeUpdate();
 			if (result > 0)
-				System.out.println("mysql division 입력성공");
+				System.out.println("mysql prepare division 입력성공");
 			else
-				System.out.println("mysql division 입력실패");
+				System.out.println("mysql prepare division 입력실패");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {
